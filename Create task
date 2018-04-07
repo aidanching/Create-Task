@@ -1,0 +1,1071 @@
+from graphics import *
+win = GraphWin('Muscle Pain', 450, 350)
+win.setBackground('yellow')
+
+def pain():
+    message2 = Text(Point(225,120), 'On a scale of 1 - 9,')
+    message2.setTextColor('red')
+    message2.setStyle('italic')
+    message2.setSize(20)
+    message2.draw(win)
+    
+    message2a = Text(Point(225,148), 'how would you rate your pain level?')
+    message2a.setTextColor('red')
+    message2a.setStyle('italic')
+    message2a.setSize(20)
+    message2a.draw(win)
+    
+    message200 = Text(Point(55,250), '1')
+    message200.setTextColor('black')
+    message200.setStyle('italic')
+    message200.setSize(25)
+    message200.draw(win)
+    
+    message201 = Text(Point(95,250), '2')
+    message201.setTextColor('black')
+    message201.setStyle('italic')
+    message201.setSize(25)
+    message201.draw(win)
+    
+    message202 = Text(Point(135,250), '3')
+    message202.setTextColor('black')
+    message202.setStyle('italic')
+    message202.setSize(25)
+    message202.draw(win)
+    
+    message203 = Text(Point(175,250), '4')
+    message203.setTextColor('black')
+    message203.setStyle('italic')
+    message203.setSize(25)
+    message203.draw(win)
+    
+    message204 = Text(Point(215,250), '5')
+    message204.setTextColor('black')
+    message204.setStyle('italic')
+    message204.setSize(25)
+    message204.draw(win)
+    
+    message205 = Text(Point(255,250), '6')
+    message205.setTextColor('black')
+    message205.setStyle('italic')
+    message205.setSize(25)
+    message205.draw(win)
+    
+    message206 = Text(Point(295,250), '7')
+    message206.setTextColor('black')
+    message206.setStyle('italic')
+    message206.setSize(25)
+    message206.draw(win)
+    
+    message207 = Text(Point(335,250), '8')
+    message207.setTextColor('black')
+    message207.setStyle('italic')
+    message207.setSize(25)
+    message207.draw(win)
+    
+    message208 = Text(Point(375,250), '9')
+    message208.setTextColor('black')
+    message208.setStyle('italic')
+    message208.setSize(25)
+    message208.draw(win)
+    
+    
+    keyString = win.getKey()
+    if keyString == "1" or keyString == "2" or keyString == "3":
+        message2.undraw()
+        message2a.undraw()
+        message200.undraw()
+        message201.undraw()
+        message202.undraw()
+        message203.undraw()
+        message204.undraw()
+        message205.undraw()
+        message206.undraw()
+        message207.undraw()
+        message208.undraw()
+        
+        global message3
+        message3 = Text(Point(220,170), 'Do not overstrain the muscle in the next')
+        message3.setTextColor('red')
+        message3.setStyle('italic')
+        message3.setSize(17)
+        
+        global message3a
+        message3a = Text(Point(220,210), 'few days, and do plenty of stretches.')
+        message3a.setTextColor('red')
+        message3a.setStyle('italic')
+        message3a.setSize(17)
+        
+
+        
+    if keyString == "4" or keyString == "5" or keyString == "6":
+        message2.undraw()
+        message2a.undraw()
+        message200.undraw()
+        message201.undraw()
+        message202.undraw()
+        message203.undraw()
+        message204.undraw()
+        message205.undraw()
+        message206.undraw()
+        message207.undraw()
+        message208.undraw()
+        
+        global message3
+        message3 = Text(Point(220,170), 'Do plenty of stretches, and if the pain is too')
+        message3.setTextColor('red')
+        message3.setStyle('italic')
+        message3.setSize(15)
+        
+        global message3a
+        message3a = Text(Point(220,210), 'much to handle take painkillers or see a doctor')
+        message3a.setTextColor('red')
+        message3a.setStyle('italic')
+        message3a.setSize(15)
+    
+        
+    if keyString == "7" or keyString == "8" or keyString == "9":
+        message2.undraw()
+        message2a.undraw()
+        message200.undraw()
+        message201.undraw()
+        message202.undraw()
+        message203.undraw()
+        message204.undraw()
+        message205.undraw()
+        message206.undraw()
+        message207.undraw()
+        message208.undraw()
+    
+    
+        global message3
+        message3 = Text(Point(220,170), 'Consider see a doctor if')
+        message3.setTextColor('red')
+        message3.setStyle('italic')
+        message3.setSize(17)
+        
+        global message3a
+        message3a = Text(Point(220,210), 'the pain is too much to handle')
+        message3a.setTextColor('red')
+        message3a.setStyle('italic')
+        message3a.setSize(17)
+
+
+
+def main():
+    message0 = Text(Point(win.getWidth()/2, 30), 'Where is the muscle pain located?')
+    message0.setTextColor('red')
+    message0.setStyle('italic')
+    message0.setSize(20)
+    message0.draw(win)
+    
+    message = Text(Point(343,120), 'Upper Body')
+    message.setTextColor('red')
+    message.setStyle('italic')
+    message.setSize(20)
+    message.draw(win)
+    message1 = Text(Point(343,240), 'Lower Body')
+    message1.setTextColor('red')
+    message1.setStyle('italic')
+    message1.setSize(20)
+    message1.draw(win)
+    
+    #right arm
+    rArm = Rectangle(Point(130,155), Point(230,180))
+    rArm.setFill('red')
+    rArm.draw(win)
+    #left arm
+    lArm = Rectangle(Point(200,155), Point(320,180))
+    lArm.setFill('red')
+    lArm.draw(win)
+    #main body
+    body = Rectangle(Point(190,140), Point(260,237))
+    body.setFill('red')
+    body.draw(win)
+    #head
+    head = Circle(Point(225,110), 34)
+    head.setFill('red')
+    head.draw(win)
+    #right leg
+    rLeg = Rectangle(Point(200,237), Point(220,287))
+    rLeg.setFill('red')
+    rLeg.draw(win)
+    #left leg
+    lLeg = Rectangle(Point(231,237), Point(251,287))
+    lLeg.setFill('red')
+    lLeg.draw(win)
+    #line separating the upper and lower body
+    aLine = Line(Point(130,200), Point(320,200))
+    aLine.draw(win)
+    
+    
+    p1 = win.getMouse()
+    message.undraw()
+    message1.undraw()
+    rArm.undraw()
+    lArm.undraw()
+    rLeg.undraw()
+    lLeg.undraw()
+    body.undraw()
+    head.undraw()
+    aLine.undraw()
+    xValue = p1.getX()
+    yValue = p1.getY()
+    
+    #upper body
+    if xValue>190 and xValue<260 and yValue>76 and yValue<200:
+        message25 = Text(Point(350,100), 'Abdomen')
+        message25.setTextColor('red')
+        message25.setStyle('italic')
+        message25.setSize(20)
+        message25.draw(win)
+        
+        message250 = Text(Point(225,180), 'Lower Back')
+        message250.setTextColor('red')
+        message250.setStyle('italic')
+        message250.setSize(20)
+        message250.draw(win)
+        
+        
+        message252 = Text(Point(100,260), 'Chest')
+        message252.setTextColor('red')
+        message252.setStyle('italic')
+        message252.setSize(20)
+        message252.draw(win)
+        
+        message253 = Text(Point(350,260), 'Shoulder')
+        message253.setTextColor('red')
+        message253.setStyle('italic')
+        message253.setSize(20)
+        message253.draw(win)
+        
+        message254 = Text(Point(100,100), 'Neck')
+        message254.setTextColor('red')
+        message254.setStyle('italic')
+        message254.setSize(20)
+        message254.draw(win)
+        
+        
+        p2 = win.getMouse()
+        xValue = p2.getX()
+        yValue = p2.getY()
+        
+        #neck
+        if xValue>70 and xValue<130 and yValue>90 and yValue<109:
+            message.undraw()
+            message0.undraw()
+            message25.undraw()
+            message250.undraw()
+            message252.undraw()
+            message253.undraw()
+            message253.undraw()
+            message254.undraw()
+            
+            pain()
+            
+            message31 = Text(Point(220,60), 'The muscle that is in pain')
+            message31.setTextColor('red')
+            message31.setStyle('italic')
+            message31.setSize(20)
+            message31.draw(win)
+            
+            message31a = Text(Point(220,100), 'is the Trapezius')
+            message31a.setTextColor('red')
+            message31a.setStyle('italic')
+            message31a.setSize(20)
+            message31a.draw(win) 
+          
+            message3.draw(win)    
+            message3a.draw(win)
+            
+            triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+            triangle.setFill('black')
+            triangle.setWidth(1)  # width of boundary line
+            triangle.draw(win)
+            
+            arrow = Rectangle(Point(300,255), Point(350,295))
+            arrow.setFill('black')
+            arrow.draw(win)
+            
+            
+            arrow1 = Text(Point(335,330), 'Stretches')
+            arrow1.setTextColor('black')
+            arrow1.setStyle('italic')
+            arrow1.setSize(20)
+            arrow1.draw(win)
+            
+            p3 = win.getMouse()
+            xValue = p3.getX()
+            yValue = p3.getY()
+            
+            if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                
+                message31.undraw()
+                message31a.undraw()
+                message3.undraw()
+                message3a.undraw()
+                triangle.undraw() 
+                arrow.undraw()
+                arrow1.undraw()     
+                
+                
+                message9 = Text(Point(220,100), 'Use your head to lean towards')
+                message9.setTextColor('red')
+                message9.setStyle('italic')
+                message9.setSize(20)
+                message9.draw(win)
+                
+                message9a = Text(Point(220,160), 'one shoulder, and stretch out the')
+                message9a.setTextColor('red')
+                message9a.setStyle('italic')
+                message9a.setSize(20)
+                message9a.draw(win)
+                
+                message9b = Text(Point(220,220), 'other side of the neck. Hold for')
+                message9b.setTextColor('red')
+                message9b.setStyle('italic')
+                message9b.setSize(20)
+                message9b.draw(win)
+                
+                message9c = Text(Point(220,280), '10 seconds and alternate sides.' )
+                message9c.setTextColor('red')
+                message9c.setStyle('italic')
+                message9c.setSize(20)
+                message9c.draw(win)
+                
+                message9d = Text(Point(220,40), 'Stretching' )
+                message9d.setTextColor('black')
+                message9d.setStyle('italic')
+                message9d.setSize(24)
+                message9d.draw(win)
+
+                                
+                                                            
+                
+        #abdomen
+        if xValue>292 and xValue<408 and yValue>88 and yValue<112:
+            message.undraw()
+            message0.undraw()
+            message25.undraw()
+            message250.undraw()
+            message252.undraw()
+            message253.undraw()
+            message253.undraw()
+            message254.undraw()
+           
+            pain()
+            
+            message31 = Text(Point(220,60), 'The muscle that is in pain')
+            message31.setTextColor('red')
+            message31.setStyle('italic')
+            message31.setSize(20)
+            message31.draw(win)
+            
+            message31a = Text(Point(220,100), 'is the Abdominals')
+            message31a.setTextColor('red')
+            message31a.setStyle('italic')
+            message31a.setSize(20)
+            message31a.draw(win) 
+          
+            message3.draw(win)    
+            message3a.draw(win)
+            
+            triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+            triangle.setFill('black')
+            triangle.setWidth(1)  # width of boundary line
+            triangle.draw(win)
+            
+            arrow = Rectangle(Point(300,255), Point(350,295))
+            arrow.setFill('black')
+            arrow.draw(win)
+            
+            
+            arrow1 = Text(Point(335,330), 'Stretches')
+            arrow1.setTextColor('black')
+            arrow1.setStyle('italic')
+            arrow1.setSize(20)
+            arrow1.draw(win)
+            
+            p3 = win.getMouse()
+            xValue = p3.getX()
+            yValue = p3.getY()
+            
+            if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                
+                message31.undraw()
+                message31a.undraw()
+                message3.undraw()
+                message3a.undraw()
+                triangle.undraw() 
+                arrow.undraw()
+                arrow1.undraw() 
+                
+                   
+                message9 = Text(Point(220,90), 'Lie down on top of a mat, and use')
+                message9.setTextColor('red')
+                message9.setStyle('italic')
+                message9.setSize(19)
+                message9.draw(win)
+                
+                message9a = Text(Point(220,140), 'your arms to push against the floor')
+                message9a.setTextColor('red')
+                message9a.setStyle('italic')
+                message9a.setSize(19)
+                message9a.draw(win)
+                
+                message9b = Text(Point(220,190), 'in a push up position, with your legs')
+                message9b.setTextColor('red')
+                message9b.setStyle('italic')
+                message9b.setSize(19)
+                message9b.draw(win)
+                
+                message9c = Text(Point(220,240), 'still flat on the ground. Hold for' )
+                message9c.setTextColor('red')
+                message9c.setStyle('italic')
+                message9c.setSize(19)
+                message9c.draw(win)
+                
+                message9ca = Text(Point(220,290), '30 seconds.' )
+                message9ca.setTextColor('red')
+                message9ca.setStyle('italic')
+                message9ca.setSize(19)
+                message9ca.draw(win)
+                
+                message9d = Text(Point(220,40), 'Stretching' )
+                message9d.setTextColor('black')
+                message9d.setStyle('italic')
+                message9d.setSize(24)
+                message9d.draw(win)   
+                
+        
+        #lower back
+        if xValue>150 and xValue<296 and yValue>169 and yValue<194:
+            message.undraw()
+            message0.undraw()
+            message25.undraw()
+            message250.undraw()
+            message252.undraw()
+            message253.undraw()
+            message253.undraw()
+            message254.undraw()
+            
+            message27 = Text(Point(220,80), 'Is the pain around the sides')
+            message27.setTextColor('red')
+            message27.setStyle('italic')
+            message27.setSize(20)
+            message27.draw(win)
+            
+            message27a = Text(Point(220,120), 'or around the spine?')
+            message27a.setTextColor('red')
+            message27a.setStyle('italic')
+            message27a.setSize(20)
+            message27a.draw(win)
+            
+            message27b = Text(Point(130,200), 'sides')
+            message27b.setTextColor('red')
+            message27b.setStyle('italic')
+            message27b.setSize(25)
+            message27b.draw(win)
+            
+            message27c = Text(Point(310,200), 'spine')
+            message27c.setTextColor('red')
+            message27c.setStyle('italic')
+            message27c.setSize(25)
+            message27c.draw(win)
+            
+            p2a = win.getMouse()
+            xValue = p2a.getX()
+            yValue = p2a.getY()
+            print (xValue)
+            print (yValue)
+            
+            
+            #sides
+            if xValue>91 and xValue<169 and yValue>185 and yValue<213:
+                
+                message27.undraw()
+                message27a.undraw()
+                message27b.undraw()
+                message27c.undraw()
+                
+                pain()
+            
+                message31 = Text(Point(220,60), 'The muscle that is in pain')
+                message31.setTextColor('red')
+                message31.setStyle('italic')
+                message31.setSize(20)
+                message31.draw(win)
+                
+                message31a = Text(Point(220,100), 'is the Lattimus Dorsi')
+                message31a.setTextColor('red')
+                message31a.setStyle('italic')
+                message31a.setSize(20)
+                message31a.draw(win) 
+            
+                message3.draw(win)    
+                message3a.draw(win)
+                
+                triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+                triangle.setFill('black')
+                triangle.setWidth(1)  # width of boundary line
+                triangle.draw(win)
+            
+                arrow = Rectangle(Point(300,255), Point(350,295))
+                arrow.setFill('black')
+                arrow.draw(win)
+            
+                arrow1 = Text(Point(335,330), 'Stretches')
+                arrow1.setTextColor('black')
+                arrow1.setStyle('italic')
+                arrow1.setSize(20)
+                arrow1.draw(win)
+                
+                p3 = win.getMouse()
+                xValue = p3.getX()
+                yValue = p3.getY()
+            
+                if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                
+                    message31.undraw()
+                    message31a.undraw()
+                    message3.undraw()
+                    message3a.undraw()
+                    triangle.undraw() 
+                    arrow.undraw()
+                    arrow1.undraw()  
+                    
+                    message9 = Text(Point(225,120), 'Raise both hands above your head,')
+                    message9.setTextColor('red')
+                    message9.setStyle('italic')
+                    message9.setSize(20)
+                    message9.draw(win)
+                
+                    message9a = Text(Point(225,170), 'and lean from side to side')
+                    message9a.setTextColor('red')
+                    message9a.setStyle('italic')
+                    message9a.setSize(20)
+                    message9a.draw(win)
+                
+                    message9d = Text(Point(220,40), 'Stretching' )
+                    message9d.setTextColor('black')
+                    message9d.setStyle('italic')
+                    message9d.setSize(24)
+                    message9d.draw(win) 
+        
+                
+            #spine
+            if xValue>271 and xValue<350 and yValue>185 and yValue<216:
+                
+                message27.undraw()
+                message27a.undraw()
+                message27b.undraw()
+                message27c.undraw()
+                
+                pain()
+                
+                message31 = Text(Point(220,60), 'The muscle that is in pain')
+                message31.setTextColor('red')
+                message31.setStyle('italic')
+                message31.setSize(20)
+                message31.draw(win)
+            
+                message31a = Text(Point(220,100), 'is the Spine')
+                message31a.setTextColor('red')
+                message31a.setStyle('italic')
+                message31a.setSize(20)
+                message31a.draw(win) 
+          
+                message3.draw(win)    
+                message3a.draw(win)
+            
+                triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+                triangle.setFill('black')
+                triangle.setWidth(1)  # width of boundary line
+                triangle.draw(win)
+            
+                arrow = Rectangle(Point(300,255), Point(350,295))
+                arrow.setFill('black')
+                arrow.draw(win)
+            
+                arrow1 = Text(Point(335,330), 'Stretches')
+                arrow1.setTextColor('black')
+                arrow1.setStyle('italic')
+                arrow1.setSize(20)
+                arrow1.draw(win)
+                
+                p3 = win.getMouse()
+                xValue = p3.getX()
+                yValue = p3.getY()
+                
+                if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                    
+                    message31.undraw()
+                    message31a.undraw()
+                    message3.undraw()
+                    message3a.undraw()
+                    triangle.undraw() 
+                    arrow.undraw()
+                    arrow1.undraw()  
+                    
+                    message9 = Text(Point(220,120), 'Stand up straight, with legs at')
+                    message9.setTextColor('red')
+                    message9.setStyle('italic')
+                    message9.setSize(19)
+                    message9.draw(win)
+                    
+                    message9a = Text(Point(220,170), ' shoulder width. Bend down with legs')
+                    message9a.setTextColor('red')
+                    message9a.setStyle('italic')
+                    message9a.setSize(19)
+                    message9a.draw(win)
+                    
+                    message9b = Text(Point(220,220), 'straight and attempt to touch your toes')
+                    message9b.setTextColor('red')
+                    message9b.setStyle('italic')
+                    message9b.setSize(19)
+                    message9b.draw(win)
+                    
+                    message9d = Text(Point(220,40), 'Stretching' )
+                    message9d.setTextColor('black')
+                    message9d.setStyle('italic')
+                    message9d.setSize(24)
+                    message9d.draw(win)   
+            
+        #chest
+        if xValue>64 and xValue<137 and yValue>246 and yValue<272:
+            message.undraw()
+            message0.undraw()
+            message25.undraw()
+            message250.undraw()
+            message252.undraw()
+            message253.undraw()
+            message253.undraw()
+            message254.undraw()
+           
+            pain()
+            
+            message31 = Text(Point(220,60), 'The muscle that is in pain')
+            message31.setTextColor('red')
+            message31.setStyle('italic')
+            message31.setSize(20)
+            message31.draw(win)
+            
+            message31a = Text(Point(220,100), 'is the Pectoralis Major')
+            message31a.setTextColor('red')
+            message31a.setStyle('italic')
+            message31a.setSize(20)
+            message31a.draw(win) 
+          
+            message3.draw(win)    
+            message3a.draw(win)
+            
+            triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+            triangle.setFill('black')
+            triangle.setWidth(1)  # width of boundary line
+            triangle.draw(win)
+            
+            arrow = Rectangle(Point(300,255), Point(350,295))
+            arrow.setFill('black')
+            arrow.draw(win)
+            
+            arrow1 = Text(Point(335,330), 'Stretches')
+            arrow1.setTextColor('black')
+            arrow1.setStyle('italic')
+            arrow1.setSize(20)
+            arrow1.draw(win)
+        
+            p3 = win.getMouse()
+            xValue = p3.getX()
+            yValue = p3.getY()
+            
+            if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                
+                message31.undraw()
+                message31a.undraw()
+                message3.undraw()
+                message3a.undraw()
+                triangle.undraw() 
+                arrow.undraw()
+                arrow1.undraw()   
+                
+                message9 = Text(Point(220,110), 'Place both hands behind your back,')
+                message9.setTextColor('red')
+                message9.setStyle('italic')
+                message9.setSize(19)
+                message9.draw(win)
+                
+                message9a = Text(Point(220,160), 'and hold your hand while keeping')
+                message9a.setTextColor('red')
+                message9a.setStyle('italic')
+                message9a.setSize(19)
+                message9a.draw(win)
+                
+                message9b = Text(Point(220,210), 'your arms straight')
+                message9b.setTextColor('red')
+                message9b.setStyle('italic')
+                message9b.setSize(19)
+                message9b.draw(win)
+                
+                message9d = Text(Point(220,40), 'Stretching' )
+                message9d.setTextColor('black')
+                message9d.setStyle('italic')
+                message9d.setSize(24)
+                message9d.draw(win) 
+                
+                    
+        
+        #shoulder        
+        if xValue>296 and xValue<402 and yValue>246 and yValue<272:
+            message.undraw()
+            message0.undraw()
+            message25.undraw()
+            message250.undraw()
+            message252.undraw()
+            message253.undraw()
+            message253.undraw()
+            message254.undraw()
+            
+            pain()
+            
+            message31 = Text(Point(220,60), 'The muscle that is in pain')
+            message31.setTextColor('red')
+            message31.setStyle('italic')
+            message31.setSize(20)
+            message31.draw(win)
+            
+            message31a = Text(Point(220,100), 'is the Deltoid')
+            message31a.setTextColor('red')
+            message31a.setStyle('italic')
+            message31a.setSize(20)
+            message31a.draw(win) 
+          
+            message3.draw(win)    
+            message3a.draw(win)
+            
+            triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+            triangle.setFill('black')
+            triangle.setWidth(1)  # width of boundary line
+            triangle.draw(win)
+            
+            arrow = Rectangle(Point(300,255), Point(350,295))
+            arrow.setFill('black')
+            arrow.draw(win)
+            
+            arrow1 = Text(Point(335,330), 'Stretches')
+            arrow1.setTextColor('black')
+            arrow1.setStyle('italic')
+            arrow1.setSize(20)
+            arrow1.draw(win)
+            
+            
+            p3 = win.getMouse()
+            xValue = p3.getX()
+            yValue = p3.getY()
+            
+            if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                
+                message31.undraw()
+                message31a.undraw()
+                message3.undraw()
+                message3a.undraw()
+                triangle.undraw() 
+                arrow.undraw()
+                arrow1.undraw()  
+                
+                message9 = Text(Point(220,110), 'Place your arm across your')
+                message9.setTextColor('red')
+                message9.setStyle('italic')
+                message9.setSize(21)
+                message9.draw(win)
+                
+                message9a = Text(Point(220,160), 'chest, and use the other arm')
+                message9a.setTextColor('red')
+                message9a.setStyle('italic')
+                message9a.setSize(21)
+                message9a.draw(win)
+                
+                message9b = Text(Point(220,210), 'to push and support it')
+                message9b.setTextColor('red')
+                message9b.setStyle('italic')
+                message9b.setSize(21)
+                message9b.draw(win)
+                
+                message9d = Text(Point(220,40), 'Stretching' )
+                message9d.setTextColor('black')
+                message9d.setStyle('italic')
+                message9d.setSize(24)
+                message9d.draw(win)  
+
+    #lower body
+    elif xValue>190 and xValue<260 and yValue>200 and yValue<287:
+        message22 = Text(Point(100,120), 'thigh')
+        message22.setTextColor('red')
+        message22.setStyle('italic')
+        message22.setSize(22)
+        message22.draw(win)
+        
+        message23 = Text(Point(320,120), 'calf')
+        message23.setTextColor('red')
+        message23.setStyle('italic')
+        message23.setSize(22)
+        message23.draw(win)
+        
+        message21 = Text(Point(210,210), 'posterior')
+        message21.setTextColor('red')
+        message21.setStyle('italic')
+        message21.setSize(22)
+        message21.draw(win)
+        
+        p2 = win.getMouse()
+        xValue = p2.getX()
+        yValue = p2.getY()
+    
+        #thigh
+        if xValue>72 and xValue<130 and yValue>99 and yValue<135:
+            
+            message0.undraw()
+            message21.undraw()
+            message22.undraw()
+            message23.undraw()
+            
+            pain()
+            
+            message31 = Text(Point(220,60), 'The muscle that is in pain')
+            message31.setTextColor('red')
+            message31.setStyle('italic')
+            message31.setSize(20)
+            message31.draw(win)
+            
+            message31a = Text(Point(220,100), 'is the Rectus Femoris')
+            message31a.setTextColor('red')
+            message31a.setStyle('italic')
+            message31a.setSize(20)
+            message31a.draw(win) 
+          
+            message3.draw(win)    
+            message3a.draw(win)
+            
+            triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+            triangle.setFill('black')
+            triangle.setWidth(1)  # width of boundary line
+            triangle.draw(win)
+            
+            arrow = Rectangle(Point(300,255), Point(350,295))
+            arrow.setFill('black')
+            arrow.draw(win)
+            
+            arrow1 = Text(Point(335,330), 'Stretches')
+            arrow1.setTextColor('black')
+            arrow1.setStyle('italic')
+            arrow1.setSize(20)
+            arrow1.draw(win)
+                        
+            p3 = win.getMouse()
+            xValue = p3.getX()
+            yValue = p3.getY()
+            
+            if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                
+                message31.undraw()
+                message31a.undraw()
+                message3.undraw()
+                message3a.undraw()
+                triangle.undraw() 
+                arrow.undraw()
+                arrow1.undraw()
+                
+                message9 = Text(Point(220,120), 'Stand up straight, and use')
+                message9.setTextColor('red')
+                message9.setStyle('italic')
+                message9.setSize(21)
+                message9.draw(win)
+                
+                message9a = Text(Point(220,170), 'one hand to hold your foot, ')
+                message9a.setTextColor('red')
+                message9a.setStyle('italic')
+                message9a.setSize(21)
+                message9a.draw(win)
+                
+                message9b = Text(Point(220,220), 'bending the knee')
+                message9b.setTextColor('red')
+                message9b.setStyle('italic')
+                message9b.setSize(21)
+                message9b.draw(win)
+                
+                message9d = Text(Point(220,40), 'Stretching' )
+                message9d.setTextColor('black')
+                message9d.setStyle('italic')
+                message9d.setSize(24)
+                message9d.draw(win)        
+            
+        #calf
+        if xValue>299 and xValue<344 and yValue>107 and yValue<135:
+            
+            message0.undraw()
+            message21.undraw()
+            message22.undraw()
+            message23.undraw()
+            
+            pain()
+            
+            message31 = Text(Point(220,60), 'The muscle that is in pain')
+            message31.setTextColor('red')
+            message31.setStyle('italic')
+            message31.setSize(20)
+            message31.draw(win)
+            
+            message31a = Text(Point(220,100), 'is the Gastrocnemius')
+            message31a.setTextColor('red')
+            message31a.setStyle('italic')
+            message31a.setSize(20)
+            message31a.draw(win) 
+          
+            message3.draw(win)    
+            message3a.draw(win)
+            
+            triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+            triangle.setFill('black')
+            triangle.setWidth(1)  # width of boundary line
+            triangle.draw(win)
+            
+            arrow = Rectangle(Point(300,255), Point(350,295))
+            arrow.setFill('black')
+            arrow.draw(win)
+            
+            arrow1 = Text(Point(335,330), 'Stretches')
+            arrow1.setTextColor('black')
+            arrow1.setStyle('italic')
+            arrow1.setSize(20)
+            arrow1.draw(win)
+            
+            p3 = win.getMouse()
+            xValue = p3.getX()
+            yValue = p3.getY()
+            
+            if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                
+                message31.undraw()
+                message31a.undraw()
+                message3.undraw()
+                message3a.undraw()
+                triangle.undraw() 
+                arrow.undraw()
+                arrow1.undraw() 
+                
+                message9 = Text(Point(220,90), 'Separate your legs, with one in ')
+                message9.setTextColor('red')
+                message9.setStyle('italic')
+                message9.setSize(19)
+                message9.draw(win)
+                
+                message9a = Text(Point(220,140), 'front of your body and one behind.')
+                message9a.setTextColor('red')
+                message9a.setStyle('italic')
+                message9a.setSize(19)
+                message9a.draw(win)
+                
+                message9b = Text(Point(220,190), 'Bend the knee of the leg in front,')
+                message9b.setTextColor('red')
+                message9b.setStyle('italic')
+                message9b.setSize(19)
+                message9b.draw(win)
+                
+                message9c = Text(Point(220,240), 'while keeping the leg behind straight.')
+                message9c.setTextColor('red')
+                message9c.setStyle('italic')
+                message9c.setSize(19)
+                message9c.draw(win)
+                
+                message9d = Text(Point(220,40), 'Stretching' )
+                message9d.setTextColor('black')
+                message9d.setStyle('italic')
+                message9d.setSize(24)
+                message9d.draw(win)
+                
+                
+                
+                  
+            
+            
+            
+        #posterior    
+        if xValue>153 and xValue<263 and yValue>197 and yValue<225:
+            
+            message0.undraw()
+            message21.undraw()
+            message22.undraw()
+            message23.undraw()
+            
+            pain()
+            
+            message31 = Text(Point(220,60), 'The muscle that is in pain')
+            message31.setTextColor('red')
+            message31.setStyle('italic')
+            message31.setSize(20)
+            message31.draw(win)
+            
+            message31a = Text(Point(220,100), 'is the Gluteus Maximus')
+            message31a.setTextColor('red')
+            message31a.setStyle('italic')
+            message31a.setSize(20)
+            message31a.draw(win) 
+          
+            message3.draw(win)    
+            message3a.draw(win)
+            
+            triangle = Polygon(Point(350,240), Point(380,275), Point(350,310))
+            triangle.setFill('black')
+            triangle.setWidth(1)  # width of boundary line
+            triangle.draw(win)
+            
+            arrow = Rectangle(Point(300,255), Point(350,295))
+            arrow.setFill('black')
+            arrow.draw(win)
+            
+            arrow1 = Text(Point(335,330), 'Stretches')
+            arrow1.setTextColor('black')
+            arrow1.setStyle('italic')
+            arrow1.setSize(20)
+            arrow1.draw(win)
+    
+            p3 = win.getMouse()
+            xValue = p3.getX()
+            yValue = p3.getY()
+            
+            if xValue>295 and xValue<382 and yValue>251 and yValue<299:
+                
+                message31.undraw()
+                message31a.undraw()
+                message3.undraw()
+                message3a.undraw()
+                triangle.undraw() 
+                arrow.undraw()
+                arrow1.undraw()  
+                
+                message9 = Text(Point(220,150), 'Sit down and raise your')
+                message9.setTextColor('red')
+                message9.setStyle('italic')
+                message9.setSize(24)
+                message9.draw(win)
+                
+                message9a = Text(Point(220,200), 'knees into your chest')
+                message9a.setTextColor('red')
+                message9a.setStyle('italic')
+                message9a.setSize(24)
+                message9a.draw(win)
+                
+                message9d = Text(Point(220,40), 'Stretching' )
+                message9d.setTextColor('black')
+                message9d.setStyle('italic')
+                message9d.setSize(24)
+                message9d.draw(win)  
+            
+        
+    
+    
+    win.getMouse()
+    win.close()
+
+main()
+
+
