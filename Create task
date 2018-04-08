@@ -1068,4 +1068,4 @@ def main():
 
 main()
 
-
+#This program takes advantage of the python library "graphics", which allows us to build a graphical interface for the user
